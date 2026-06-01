@@ -1,0 +1,215 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+button {
+  cursor: pointer;
+}
+body {
+  background: #fff;
+  color: #333;
+}
+.wrap {
+  width: 100%;
+  height: 920px;
+  margin: 0 auto;
+}
+.main {
+  width: 100%;
+  height: 800px;
+  display: flex;
+}
+header {
+  width: 200px;
+  background: hotpink;
+  padding: 100px 0;
+  text-align: center;
+}
+header h1 {
+  margin-bottom: 20px;
+}
+nav {
+  padding: 0 10px;
+}
+nav > ul > li {
+  position: relative; /* .sub의 기준점*/
+}
+nav > ul > li > a {
+  display: block;
+  background: blue;
+  color: #fff;
+  padding: 10px;
+}
+nav > ul > li:hover > a,
+nav > ul > li > a:focus,
+nav > ul > li.on > a {
+  background: #fff;
+  color: blue;
+}
+.sub {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 180px;
+  width: calc(100vw - 200px);
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+.sub li {
+  float: left; /* li들을 가로로 배치하기 위해 float 사용 */
+}
+.sub li a {
+  width: 200px;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+.sub li a:hover,
+.sub li a:focus,
+.sub li.on a {
+  background: blue;
+  color: #fff;
+}
+.main .contents {
+  width: calc(100% - 200px);
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.contents .slide {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  background: pink;
+}
+
+.slide a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.slide a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contents .link {
+  width: 100%;
+  height: 150px;
+  background: pink;
+}
+.link ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 30px;
+}
+.link ul a:hover {
+  opacity: 0.5;
+}
+.contents .con {
+  width: 100%;
+  height: 250px;
+  background: #777;
+  display: flex;
+  gap: 20px;
+}
+.con .notice {
+  width: 50%;
+  height: 100%;
+  background: #aaa;
+  padding: 20px;
+}
+.notice ul a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notice ul a:hover {
+  text-decoration: underline;
+}
+.con .gall {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}
+.gall ul {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.gall a {
+  text-align: center;
+}
+.gall a > img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.gall a > img:hover {
+  opacity: 0.5;
+}
+footer {
+  width: 100%;
+  height: 120px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .fmenu {
+  display: flex;
+  flex-direction: column;
+}
+footer .fmenu ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+}
+footer .fmenu ul a:hover {
+  text-decoration: underline;
+  background: #00f;
+}
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  z-index: 9999;
+  display: none;
+}
+.popup_inner {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+}
+.close {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
