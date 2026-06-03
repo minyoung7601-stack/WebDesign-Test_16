@@ -1,10 +1,10 @@
 $(function () {
   //메뉴
   $("nav>ul>li").on("mouseover focusin", function () {
-    $(".sub, .bg").stop().slideDown();
+    $(".sub").stop().fadeIn(300);
   });
   $("nav>ul>li").on("mouseout focusout", function () {
-    $(".sub, .bg").stop().slideUp();
+    $(".sub").stop().fadeOut(300);
   });
 
   //슬라이드
